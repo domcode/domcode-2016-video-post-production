@@ -13,6 +13,7 @@ output/pre-roll/total.mp4: \
 	ffmpeg \
 		-f concat \
 		-i output/pre-roll-slides/pre-roll.txt \
+		-y \
 		-codec copy $(TARGET)
 
 output/pre-roll-slides/pre-roll.txt: \
@@ -31,6 +32,7 @@ output/pre-roll-slides/1-intro.mp4: \
 		-i input/pre-roll-slides/1-intro.png \
 		-c:v libx264 \
 		-t 5 \
+		-y \
 		$(TARGET)
 
 output/pre-roll-slides/3-sponsors.mp4: \
@@ -41,4 +43,5 @@ output/pre-roll-slides/3-sponsors.mp4: \
 		-i input/pre-roll-slides/3-sponsors.png \
 		-c:v libx264 \
 		-t 5 \
+		-y \
 		$(TARGET)
